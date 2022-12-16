@@ -14,6 +14,7 @@ $DarkGrey1: #1F1F1F;
 $DarkGrey2: #101010;
 
 $SidebarWidth: calc(12.2rem + 8.1vw);
+$ContentLeftPadding: calc(0.95rem + 2.6vw);
 
 @import './mixins/buttons.scss';
 @import './mixins/p.scss';
@@ -36,6 +37,27 @@ a{
 
 body{
     background-color: $LightGrey3;
+    color: $DarkGrey2;
+
+    button#show-nav{
+
+        position: fixed;
+        top: 3.85rem;
+        right: 0;
+        padding: 0.1rem 1.1rem 0.1rem 0.4rem;
+        border: none;
+
+        background-color: $LightGrey3;
+
+        img{
+            height: 2rem;
+        }
+        
+
+        @media (min-width:750px) {
+            display: none;
+        }
+    }
 
     main{
         margin-left: $SidebarWidth;

@@ -1,6 +1,6 @@
 section#home{
     background-color: $LightGrey3;
-    padding-left: calc(2rem + 1.25vw);
+    padding-left: $ContentLeftPadding;
     display: flex;
     flex-direction: column;
 

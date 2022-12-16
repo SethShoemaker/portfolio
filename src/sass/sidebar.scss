@@ -2,20 +2,40 @@ nav#sidebar{
     position: fixed;
     top:0;
     left: 0;
+    z-index: 1;
 
     height: 100vh;
-    width: $SidebarWidth;
 
     background-color: $LightBlue1;
     color:$LightGrey1;
 
+    @media (min-width:750px) {
+        display: block !important;
+        width: $SidebarWidth;
+    }
+
     @media (max-width:750px) {
-        display: none;
         width: 100vw;
     }
 
+    button#remove-nav{
+        position: fixed;
+        border: none;
+        background-color: $LightBlue2;
+        top: 3.85rem;
+        right: 1.1rem;
+
+        img{
+            height: 2rem;
+        }
+
+        @media (min-width:750px) {
+            display: none;
+        }
+    }
+
     div#top{
-        height: calc(7.5rem + 7vw);
+        height: calc(9rem + 5vw);
 
         display: flex;
         flex-direction: column;
@@ -26,32 +46,32 @@ nav#sidebar{
         color: $TrueWhite;
 
         h1{
-            margin-top: calc(1.35rem + 1.25vw);
+            margin-top: calc(1.55rem + 1vw);
             font-weight: 400;
-            letter-spacing: calc(0.05rem + 0.03vw);
-            font-size: calc(1.13rem + 0.7vw);
+            letter-spacing: calc(0.05rem + 0.01vw);
+            font-size: calc(1.55rem + 0.19vw);
         }
 
         span{
             margin-top: calc(0.3rem + 0.2vw);
             font-weight: 100;
             letter-spacing: calc(0.03rem + 0.02vw);
-            font-size: calc(1.03rem + 0.55vw);
+            font-size: calc(1.4rem + 0.13vw);
         }
     }
 
     ul#sections{
-        padding: calc(0.35rem + 0.2vw) 0;
+        padding: calc(0.5rem + 0.2vw) 0;
 
         list-style: none;
 
         li{
-            padding: calc(0.9rem + 0.75vw) 0;
+            padding: calc(1.2rem + 0.4vw) 0;
 
             a{
                 padding-left: calc(1.5rem + 1.25vw);
 
-                font-size: calc(0.93rem + 0.37vw);
+                font-size: calc(1.05rem + 0.1vw);
                 letter-spacing: calc(0.025rem + 0.015vw);
                 font-weight: 100;
             }
@@ -70,7 +90,7 @@ nav#sidebar{
         padding-top: calc(2rem + 0.75vw);
 
         div#icons{
-            width: 55%;
+            width: calc(8.5rem + 1vw);
 
             display: flex;
             flex-direction: row;
@@ -82,17 +102,17 @@ nav#sidebar{
                 align-items: center;
 
                 img{
-                    max-width: calc(1.17rem + 0.87vw);
-                    max-height: calc(1.17rem + 0.87vw);
+                    max-width: calc(1.75rem + 0.2vw);
+                    max-height: calc(1.75rem + 0.2vw);
                 }
             }
         }
 
         a#resume-link{
-            margin-top: calc(0.8rem + 0.75vw);
+            margin-top: calc(1rem + 0.45vw);
 
-            font-size: calc(0.89rem + 0.35vw);
-            letter-spacing: calc(0.031rem + 0.022vw);
+            font-size: calc(1.1rem + 0.1vw);
+            letter-spacing: calc(0.033rem + 0.019vw);
             font-weight: 200;
         }
     }
