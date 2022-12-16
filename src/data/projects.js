@@ -1,4 +1,4 @@
-[
+export const projects = [
     {
         "name" : "Zesty",
         "technologies": [ "PHP", "Laravel", "MySQL", "AWS", "JavaScript", "jQuery", "SASS" ],

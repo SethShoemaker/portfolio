@@ -18,8 +18,10 @@ $ContentLeftPadding: calc(0.95rem + 2.6vw);
 
 @import './mixins/buttons.scss';
 @import './mixins/p.scss';
+@import './mixins/section-title.scss';
 
 @import './sections/home.scss';
+@import './sections/skills.scss';
 
 @import './sidebar.scss';
 
@@ -68,6 +70,7 @@ body{
     
         section{
             background-color: $LightGrey2;
+            padding-left: $ContentLeftPadding;
         }
     }
 }

@@ -1,0 +1,35 @@
+section#skills{
+
+    h2{
+        padding-top: calc(2.3rem + 0.25vw);
+        @include section-title;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: calc(4rem + 0.5vw);
+
+        li{
+            margin-top: calc(1.9rem + 0.5vw);
+            display: grid;
+            grid-template-rows: calc(3rem + 1vw) calc(1rem + 0.5vw);
+            width: calc(5rem + 7vw);
+
+            img{
+                max-height: calc(2.6rem + 0.8vw);
+                max-width: calc(2.9rem + 1vw);
+                margin: auto;
+            }
+
+            span{
+                padding-top: calc(0.35rem + 0.25vw);
+                font-size: calc(1rem + 0.14vw);
+                font-weight: 300;
+                text-align: center;
+            }
+        }
+    }
+}
