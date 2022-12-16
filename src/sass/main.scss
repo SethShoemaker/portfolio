@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+$LightBlue1: #2725A7;
+$LightBlue2: #26249B;
+$LightBlue3: #222186;
+
+$TrueWhite : #FFF;
+
+$LightGrey1: #FAFAFA;
+$LightGrey2: #F7F7F7;
+$LightGrey3: #E8E8E8;
+
+$DarkGrey1: #1F1F1F;
+$DarkGrey2: #101010;
+
+$SidebarWidth: calc(12.2rem + 8.1vw);
+
+@import './sidebar.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+body main{
+    background-color: $LightGrey2;
+    margin-left: $SidebarWidth;
+
+    @media (max-width:720px) {
+        margin-left: 0;
+    }
+}

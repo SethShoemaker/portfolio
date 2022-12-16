@@ -1,0 +1,94 @@
+nav#sidebar{
+    position: fixed;
+    top:0;
+    left: 0;
+
+    height: 100vh;
+    width: $SidebarWidth;
+
+    background-color: $LightBlue1;
+    color:$LightGrey1;
+
+    div#top{
+        height: calc(7.5rem + 7vw);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: $LightBlue2;
+        box-shadow: 0 2px 2px $LightBlue3;
+        color: $TrueWhite;
+
+        h1{
+            margin-top: calc(1.35rem + 1.25vw);
+            font-weight: 400;
+            letter-spacing: calc(0.05rem + 0.03vw);
+            font-size: calc(1.13rem + 0.7vw);
+        }
+
+        span{
+            margin-top: calc(0.3rem + 0.2vw);
+            font-weight: 100;
+            letter-spacing: calc(0.03rem + 0.02vw);
+            font-size: calc(1.03rem + 0.55vw);
+        }
+    }
+
+    ul#sections{
+        padding: calc(0.35rem + 0.2vw) 0;
+
+        list-style: none;
+
+        li{
+            padding: calc(0.9rem + 0.75vw) 0;
+
+            a{
+                padding-left: calc(1.5rem + 1.25vw);
+
+                font-size: calc(0.93rem + 0.37vw);
+                letter-spacing: calc(0.025rem + 0.015vw);
+                font-weight: 100;
+            }
+        }
+    }
+
+    div#links{
+        width: 87%;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-top: 1px solid $LightBlue3;
+        padding-top: calc(2rem + 0.75vw);
+
+        div#icons{
+            width: 55%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    max-width: calc(1.17rem + 0.87vw);
+                    max-height: calc(1.17rem + 0.87vw);
+                }
+            }
+        }
+
+        a#resume-link{
+            margin-top: calc(0.8rem + 0.75vw);
+
+            font-size: calc(0.89rem + 0.35vw);
+            letter-spacing: calc(0.031rem + 0.022vw);
+            font-weight: 200;
+        }
+    }
+}
