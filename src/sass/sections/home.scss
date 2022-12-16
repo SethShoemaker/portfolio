@@ -1,0 +1,40 @@
+section#home{
+    background-color: $LightGrey3;
+    padding-left: calc(2rem + 1.25vw);
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        font-size: calc(1.75rem + 1.9vw);
+        font-weight: 600;
+        padding-top: calc(3rem + 1.25vw);
+    }
+
+    span{
+        font-size: calc(1.05rem + 1.1vw);
+        font-weight: 200;
+        padding-top: calc(0.17rem + 0.1vw);
+    }
+
+    p{
+        @include p;
+
+        padding-top: calc(1.1rem + 0.6vw);
+        width: calc(50% + 15vw);
+        min-width: 300px;
+
+        br{
+            display: none;
+
+            @media (min-width:1365px) {
+                display: inline;
+            }
+        }
+    }
+
+    div.button-row{
+        @include button-row;
+
+        padding: calc(0.9rem + 0.25vw) 0 calc(2.2rem + 1.1vw) 0;
+    }
+}

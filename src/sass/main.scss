@@ -15,6 +15,11 @@ $DarkGrey2: #101010;
 
 $SidebarWidth: calc(12.2rem + 8.1vw);
 
+@import './mixins/buttons.scss';
+@import './mixins/p.scss';
+
+@import './sections/home.scss';
+
 @import './sidebar.scss';
 
 *{
@@ -29,11 +34,18 @@ a{
     text-decoration: none;
 }
 
-body main{
-    background-color: $LightGrey2;
-    margin-left: $SidebarWidth;
+body{
+    background-color: $LightGrey3;
 
-    @media (max-width:720px) {
-        margin-left: 0;
+    main{
+        margin-left: $SidebarWidth;
+    
+        @media (max-width:750px) {
+            margin-left: 0;
+        }
+    
+        section{
+            background-color: $LightGrey2;
+        }
     }
 }

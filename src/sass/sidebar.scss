@@ -9,6 +9,11 @@ nav#sidebar{
     background-color: $LightBlue1;
     color:$LightGrey1;
 
+    @media (max-width:750px) {
+        display: none;
+        width: 100vw;
+    }
+
     div#top{
         height: calc(7.5rem + 7vw);
 

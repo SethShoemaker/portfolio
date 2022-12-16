@@ -1,0 +1,5 @@
+@mixin p{
+    font-size: calc(0.95rem + 0.13vw);
+    font-weight: 200;
+    line-height: calc(1.7rem + 0.55vw);
+}

@@ -1,0 +1,17 @@
+@mixin button-row{
+    display: flex;
+    flex-direction: row;
+
+    > *{
+        margin-right: calc(1rem + 0.5vw);
+
+        background-color: $LightBlue2;
+        padding: calc(0.42rem + 0.1vw)  calc(0.6rem + 0.3vw);
+        border-radius: 4px;
+
+        color: $TrueWhite;
+        font-size: calc(0.74rem + 0.19vw);
+        letter-spacing: calc(0.019rem + 0.035vw);
+        font-weight: 300;
+    }
+}
