@@ -1,0 +1,57 @@
+section#projects{
+
+    h2{
+        @include section-title;
+    }
+
+    ul#projects-list{
+        list-style: none;
+
+        li.project{
+            margin-top: calc(1rem + 0.5vw);
+            width: calc(11rem + 37vw);
+            padding: calc(1.25rem + 0.7vw);
+            background-color: $TrueWhite;
+            display: flex;
+            flex-direction: column;
+
+            h3{
+                font-size: calc(1.4rem + 0.4vw);
+                font-weight: 300;
+            }
+
+            label{
+                padding-top: calc(0.7rem + 0.15vw);
+                font-size: calc(0.8rem + 0.1vw);
+                font-weight: 400;
+            }
+
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                li{
+                    background-color: $LightGrey2;
+                    padding: calc(0.39rem + 0.09vw)  calc(0.55rem + 0.27vw);
+                    margin: calc(0.25rem + 0.1vw) calc(0.5rem + 0.25vw) calc(0.25rem + 0.1vw) 0;
+                    font-size: calc(0.69rem + 0.14vw);
+                    letter-spacing: calc(0.01rem + 0.005vw);
+                    font-weight: 300;
+                    border-radius: 5px;
+                }
+            }
+
+            p{
+                padding-top: calc(0.7rem + 0.15vw);
+                @include p;
+            }
+
+            div.button-row{
+                padding-top: calc(0.5rem + 0.1vw);
+                @include button-row;
+            }
+        }
+    }
+}
