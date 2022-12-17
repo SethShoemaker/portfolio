@@ -11,6 +11,7 @@ section#skills{
         flex-direction: row;
         flex-wrap: wrap;
         padding-bottom: calc(4rem + 0.5vw);
+        max-width: calc(20rem + 50vw);
 
         li{
             margin-top: calc(1.9rem + 0.5vw);
