@@ -1,5 +1,7 @@
 import { projects } from '../../data/projects';
 const projectsList = document.querySelector("section#projects ul#projects-list");
+const projectImagePath = "/images/projects/";
+const laptopBackgroundImagePath = "/images/backgrounds/laptop.png";
 
 for (let i = 0; i < projects.length; i++) {
     const project = projects[i];
@@ -8,16 +10,18 @@ for (let i = 0; i < projects.length; i++) {
     listItem.classList.add("project");
 
 
+    var listItemLeft = document.createElement("div");
+    listItemLeft.classList.add("project-left");
+    listItem.appendChild(listItemLeft);
+
     var nameHeading = document.createElement("h3");
     nameHeading.innerText = project.name;
-    listItem.appendChild(nameHeading);
-
+    listItemLeft.appendChild(nameHeading);
 
     var techListLabel = document.createElement("label");
     techListLabel.id = project.name + "-tech-list-label";
     techListLabel.innerText = "Technologies"
-    listItem.appendChild(techListLabel);
-
+    listItemLeft.appendChild(techListLabel);
 
     var techList = document.createElement("ul");
     techList.setAttribute("aria-labelledby", techListLabel.id);
@@ -29,12 +33,11 @@ for (let i = 0; i < projects.length; i++) {
         techListItem.innerText = technology;
         techList.appendChild(techListItem);
     }
-    listItem.appendChild(techList);
-
+    listItemLeft.appendChild(techList);
 
     var descriptionParagraph = document.createElement("p");
     descriptionParagraph.innerText = project.description;
-    listItem.appendChild(descriptionParagraph);
+    listItemLeft.appendChild(descriptionParagraph);
 
     var buttonRow = document.createElement("div");
     buttonRow.classList.add("button-row");
@@ -51,7 +54,23 @@ for (let i = 0; i < projects.length; i++) {
         repoLink.innerText = "Repo";
         buttonRow.appendChild(repoLink);
 
-    listItem.appendChild(buttonRow);
+    listItemLeft.appendChild(buttonRow);
+
+
+    var listItemRight = document.createElement("div");
+    listItemRight.classList.add("project-right");
+    listItem.appendChild(listItemRight);
+
+    var imageContainer = document.createElement("div");
+    imageContainer.classList.add("image-container");
+    imageContainer.style.backgroundImage = `url(${laptopBackgroundImagePath})`;
+    listItemRight.appendChild(imageContainer);
+
+    var image = document.createElement("div");
+    image.classList.add("image");
+    image.role = "img";
+    image.style.backgroundImage = `url(${projectImagePath + project.image})`;
+    imageContainer.appendChild(image);
 
     projectsList.appendChild(listItem);
 }
