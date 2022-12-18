@@ -1,6 +1,7 @@
 section#projects{
 
     h2{
+        padding-top: calc(2rem + 0.5vw);
         @include section-title;
     }
 
@@ -38,6 +39,7 @@ section#projects{
                 }
     
                 ul{
+                    padding-top: calc(0.05rem + 0.05vw);
                     list-style: none;
                     display: flex;
                     flex-direction: row;
@@ -79,8 +81,8 @@ section#projects{
                     background-position: center;
 
                     @media (min-width:1100px) {
-                        height: calc(14rem + 6vw);
-                        width: calc(14rem + 6vw);
+                        height: calc(12rem + 9vw);
+                        width: calc(12rem + 9vw);
                     }
 
                     @media (max-width:1100px) {
